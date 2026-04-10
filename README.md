@@ -2,19 +2,58 @@
 
 An enhanced Model Context Protocol (MCP) server for SearXNG with **100% privacy-focused better search**, advanced features, plugin system, and flexible deployment options.
 
-## 🚀 New in v2.2.0: Auto Docker Management
+## 🚀 Quick Start with Self-Hosted SearXNG
 
-**Just run `npx` and everything works!** No manual Docker setup required.
+### Option 1: NPX (Auto Docker)
 
 ```bash
 npx -y @otbossam/searxng-mcp-server
 ```
 
-The server automatically:
-- ✅ Checks if Docker is installed
-- ✅ Creates/starts SearXNG container
-- ✅ Waits for container health check
-- ✅ Starts the MCP server
+### Option 2: Use Existing SearXNG Instance
+
+If you have a self-hosted SearXNG running (e.g., on port 8888):
+
+```bash
+SEARXNG_BASE_URL=http://localhost:8888 npx -y @otbossam/searxng-mcp-server
+```
+
+Or install globally and run:
+
+```bash
+npm install -g @otbossam/searxng-mcp-server
+SEARXNG_BASE_URL=http://localhost:8888 searxng-mcp-server
+```
+
+### Claude Desktop Configuration
+
+```json
+{
+  "mcpServers": {
+    "searxng": {
+      "command": "/opt/homebrew/bin/searxng-mcp-server",
+      "args": [],
+      "env": {
+        "SEARXNG_BASE_URL": "http://localhost:8888"
+      }
+    }
+  }
+}
+```
+
+## 🔧 Environment Variables
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `SEARXNG_BASE_URL` | Your SearXNG instance URL | `http://localhost:32768` |
+| `HOST` | Server host | `0.0.0.0` |
+| `PORT` | Server port | `32769` |
+| `SEARXNG_LANGUAGE` | Search language | `auto` |
+| `SEARXNG_SAFE_SEARCH` | Safe search level (0-2) | `0` |
+
+---
+
+## 🌟 Better Search 🔬
 
 ## 🌟 Better Search 🔬
 
