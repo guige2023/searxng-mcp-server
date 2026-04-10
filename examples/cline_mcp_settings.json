@@ -1,0 +1,20 @@
+# Example MCP Configuration for Cline in VS Code
+# File location: .vscode/cline_mcp_settings.json in your workspace
+
+{
+  "mcpServers": {
+    "searxng-enhanced": {
+      "command": "python3",
+      "args": [
+        "/absolute/path/to/searxng-mcp-crawl/mcp_stdio_server.py"
+      ],
+      "env": {
+        "SEARXNG_BASE_URL": "http://localhost:32768",
+        "CONTENT_MAX_LENGTH": "10000",
+        "SEARCH_RESULT_LIMIT": "10",
+        "DESIRED_TIMEZONE": "America/Los_Angeles"
+      },
+      "timeout": 60
+    }
+  }
+}

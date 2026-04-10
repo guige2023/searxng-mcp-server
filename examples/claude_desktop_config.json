@@ -1,0 +1,21 @@
+# Example MCP Configuration for Claude Desktop
+# File location: ~/Library/Application Support/Claude/claude_desktop_config.json (macOS)
+#                %APPDATA%\Claude\claude_desktop_config.json (Windows)
+#                ~/.config/Claude/claude_desktop_config.json (Linux)
+
+{
+  "mcpServers": {
+    "searxng-enhanced": {
+      "command": "python3",
+      "args": [
+        "/absolute/path/to/searxng-mcp-crawl/mcp_stdio_server.py"
+      ],
+      "env": {
+        "SEARXNG_BASE_URL": "http://localhost:32768",
+        "CONTENT_MAX_LENGTH": "10000",
+        "SEARCH_RESULT_LIMIT": "10",
+        "DESIRED_TIMEZONE": "America/New_York"
+      }
+    }
+  }
+}

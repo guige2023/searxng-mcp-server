@@ -1,0 +1,41 @@
+{
+  "name": "@otbossam/searxng-mcp-server",
+  "version": "2.3.2",
+  "description": "SearXNG MCP Server with Better Search - 100% privacy-focused intelligent search with auto Docker management and User Agent rotation",
+  "main": "index.js",
+  "bin": {
+    "searxng-mcp-server": "index.js",
+    "searxng-mcp-stdio": "stdio.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"No tests specified\" && exit 0",
+    "postinstall": "node postinstall.js"
+  },
+  "keywords": [
+    "mcp",
+    "searxng",
+    "search",
+    "mcp-server",
+    "model-context-protocol",
+    "better-search",
+    "privacy-focused",
+    "recursive-crawling",
+    "quality-assessment",
+    "local-ai",
+    "user-agent-rotation",
+    "bot-detection-bypass"
+  ],
+  "author": "otbossam",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damin25soka7/hi.git",
+    "directory": "searxng-mcp-crawl"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
